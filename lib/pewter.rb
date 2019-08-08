@@ -1,4 +1,8 @@
+require "httparty"
+require "pry"
+
 require "pewter/configuration"
+require "pewter/client"
 
 module Pewter
   class << self
