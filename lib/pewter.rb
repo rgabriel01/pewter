@@ -7,6 +7,7 @@ require "pewter/client"
 require "pewter/parsers/base"
 require "pewter/parsers/stats"
 require "pewter/parsers/sprites"
+require "pewter/parsers/abilities"
 
 module Pewter
   class << self

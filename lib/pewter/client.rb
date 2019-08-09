@@ -1,6 +1,7 @@
 module Pewter
   class Client
     POKEMON_DESCRIPTION_KEYS = [
+      "abilities",
       "base_experience",
       "height",
       "id",
@@ -34,8 +35,10 @@ module Pewter
       parsed_results = {}
       POKEMON_DESCRIPTION_KEYS.each do |key|
         case key
+        when "abilities"
+          parsed_results[key] = Pewter::Parsers::Abilities.parse(result[key])
         when "stats"
-          parsed_results[key] =  Pewter::Parsers::Stats.parse(result[key])
+          parsed_results[key] = Pewter::Parsers::Stats.parse(result[key])
         when "sprites"
           parsed_results[key] = Pewter::Parsers::Sprites.parse(result[key])
         else
