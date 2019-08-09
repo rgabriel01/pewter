@@ -2,7 +2,10 @@ require "httparty"
 require "pry"
 
 require "pewter/configuration"
+
 require "pewter/client"
+require "pewter/parsers/base"
+require "pewter/parsers/stats"
 require "pewter/parsers/sprites"
 
 module Pewter

@@ -1,18 +1,10 @@
 module Pewter
   module Parsers
-    class Sprites
-      def self.parse(sprites_hash)
-        new(sprites_hash).parse
-      end
-
-      def initialize(sprites_hash)
-        @sprites_hash = sprites_hash
-      end
-
+    class Sprites < Base
       def parse
         parsed_results = []
-        @sprites_hash.keys.each do |key|
-          parsed_results << @sprites_hash[key]
+        @hash.keys.each do |key|
+          parsed_results << @hash[key]
         end
         parsed_results
       end

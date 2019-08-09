@@ -35,7 +35,7 @@ module Pewter
       POKEMON_DESCRIPTION_KEYS.each do |key|
         case key
         when "stats"
-          parsed_results[key] = ""
+          parsed_results[key] =  Pewter::Parsers::Stats.parse(result[key])
         when "sprites"
           parsed_results[key] = Pewter::Parsers::Sprites.parse(result[key])
         else

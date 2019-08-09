@@ -1,4 +1,3 @@
-require "pry"
 RSpec.describe Pewter::Parsers::Sprites do
   describe ".parse" do
     let(:sprites_hash) {{"front" => "pikachu-front.jpg"}}
