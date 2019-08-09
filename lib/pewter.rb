@@ -3,6 +3,7 @@ require "pry"
 
 require "pewter/configuration"
 require "pewter/client"
+require "pewter/parsers/sprites"
 
 module Pewter
   class << self

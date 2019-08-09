@@ -11,4 +11,11 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.before(:all) do
+    Pewter.configure do |config|
+      config.url = "https://pokeapi.co/api"
+      config.api_version = "v2"
+    end
+  end
 end

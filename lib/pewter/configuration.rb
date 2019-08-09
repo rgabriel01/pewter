@@ -1,11 +1,10 @@
 module Pewter
   class Configuration
-    attr_accessor :access_key, :secret_key, :personal_key
+    attr_accessor :url, :api_version
 
     def initialize
-      @access_key = nil
-      @secret_key = nil
-      @personal_key = nil
+      @url = nil
+      @api_version = nil
     end
   end
 end
