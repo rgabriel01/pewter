@@ -8,6 +8,7 @@ module Pewter
       "name",
       "sprites",
       "stats",
+      "types",
     ].freeze
 
     def self.get_pokemon(q = "")
@@ -41,6 +42,8 @@ module Pewter
           parsed_results[key] = Pewter::Parsers::Stats.parse(result[key])
         when "sprites"
           parsed_results[key] = Pewter::Parsers::Sprites.parse(result[key])
+        when "types"
+          parsed_results[key] = Pewter::Parsers::Types.parse(result[key])
         else
           parsed_results[key] = result[key]
         end

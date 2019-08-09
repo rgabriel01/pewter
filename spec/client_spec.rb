@@ -8,8 +8,5 @@ RSpec.describe Pewter::Client do
         end
       end
     end
-
-    context "when it failed" do
-    end
   end
 end
