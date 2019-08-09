@@ -9,6 +9,7 @@ module Pewter
       "sprites",
       "stats",
       "types",
+      "weight",
     ].freeze
 
     def self.get_pokemon(q = "")
