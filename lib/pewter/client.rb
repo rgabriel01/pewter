@@ -16,6 +16,10 @@ module Pewter
       new.get_pokemon(q)
     end
 
+    def self.get_pokemons(limit = 5000)
+      new.get_pokemons(limit)
+    end
+
     def initialize; end
 
     def get_pokemon(q = "")
@@ -24,6 +28,17 @@ module Pewter
         parse_results(JSON.parse(resp.body))
       else
         {}
+      end
+    end
+
+    def get_pokemons(limit = 5000)
+      resp = HTTParty.get("#{api_url}?limit=#{limit}")
+      result = if resp.response.code == "200"
+        JSON.parse(resp.body)["results"].map do |pokemon|
+          Pewter::Parsers::BasicInformation.parse(pokemon)
+        end
+      else
+        []
       end
     end
 

@@ -9,6 +9,7 @@ require "pewter/parsers/stats"
 require "pewter/parsers/sprites"
 require "pewter/parsers/abilities"
 require "pewter/parsers/types"
+require "pewter/parsers/basic_information"
 
 module Pewter
   class << self
